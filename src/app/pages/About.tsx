@@ -1,3 +1,5 @@
+import DrawerSettingsArea from '../components/drawer-settings';
+
 const About: React.FC = () => {
   return (
     <>
@@ -8,6 +10,7 @@ const About: React.FC = () => {
         determined by me and are subject to change. This app is intended as a
         personal study guide and not an educational tool of its own merits.
       </p>
+      <DrawerSettingsArea />
     </>
   );
 };

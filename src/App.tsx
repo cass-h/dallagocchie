@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { PaletteMode } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import router from './app/routing';
 import './App.scss';
-import Button from '@mui/material/Button';
 import { RouterProvider } from 'react-router-dom';
-
+import { selectTheme, setTheme } from './features/settings/settings.slice';
+import { useAppDispatch, useAppSelector } from './app/hooks';
 function App() {
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  // #region Theme
+  const prefersTheme = useMediaQuery('(prefers-color-scheme: dark)')
+    ? 'dark'
+    : 'light';
 
-  const [mode, setMode] = React.useState<PaletteMode>(
-    prefersDarkMode ? 'dark' : 'light'
-  );
+  const dispatch = useAppDispatch();
+  // listen to the user's theme preference, this allows them to set it in browser or in prefs
+  useEffect(() => {
+    dispatch(setTheme(prefersTheme));
+  }, [prefersTheme]);
+  const mode = useAppSelector(selectTheme);
   const theme = React.useMemo(
     () =>
       createTheme({
@@ -23,22 +28,14 @@ function App() {
       }),
     [mode]
   );
+
+  // #endregion
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
         <CssBaseline></CssBaseline>
-        <header className="App-header">
-          <Button
-            onClick={() =>
-              setMode((prevMode: PaletteMode) =>
-                prevMode === 'light' ? 'dark' : 'light'
-              )
-            }
-          >
-            Toggle Theme
-          </Button>
-          <RouterProvider router={router}></RouterProvider>
-        </header>
+        <header className="App-header"></header>
+        <RouterProvider router={router}></RouterProvider>
       </ThemeProvider>
     </div>
   );

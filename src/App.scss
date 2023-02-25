@@ -14,11 +14,11 @@
 }
 
 .App-header {
-  min-height: 100vh;
+  min-height: 15vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vh);
 }
 

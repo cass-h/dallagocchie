@@ -1,3 +1,5 @@
+import DrawerSettingsArea from '../components/drawer-settings';
+
 const Home: React.FC = () => {
   return (
     <>
@@ -10,6 +12,7 @@ const Home: React.FC = () => {
         </abbr>{' '}
         rank challenges on the Bolognese traditions.
       </p>
+      <DrawerSettingsArea />
     </>
   );
 };
