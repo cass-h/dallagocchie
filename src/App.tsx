@@ -34,7 +34,6 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <CssBaseline></CssBaseline>
-        <header className="App-header"></header>
         <RouterProvider router={router}></RouterProvider>
       </ThemeProvider>
     </div>

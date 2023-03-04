@@ -1,6 +1,10 @@
-const SwordAloneIndex: React.FC = () => {
+import { FC } from 'react';
+import { Container } from '../../components/Container';
+
+const SwordAloneIndex: FC = () => {
   return (
     <>
+      <Container title={'Sword Alone'}></Container>
       <h1>Sword Alone</h1>
       <p>
         In this section you will find the foundations of dall'Agocchie's system,
@@ -25,6 +29,10 @@ const SwordAloneIndex: React.FC = () => {
 	 stramazzone
  defenses
 	 on the similarities
+		true edge
+		false edge
+		void
+		opposition
 	 coda lunga stretta
 	 coda lunga alta
 	 porta di ferro stretta

@@ -32,9 +32,9 @@ export default function DrawerSettingsArea() {
           <ListItemButton onClick={toggleTheme}>
             <ListItemIcon>
               {theme === 'dark' ? (
-                <LightModeOutlined color="secondary" />
+                <LightModeOutlined color="inherit" />
               ) : (
-                <DarkModeOutlined color="secondary" />
+                <DarkModeOutlined color="inherit" />
               )}
             </ListItemIcon>
             <ListItemText primary="Toggle theme" />
@@ -46,7 +46,7 @@ export default function DrawerSettingsArea() {
             onClick={homeButton}
           >
             <ListItemIcon>
-              <HomeOutlined color="secondary" />
+              <HomeOutlined color="inherit" />
             </ListItemIcon>
             <ListItemText primary="Home" />
           </ListItemButton>

@@ -1,8 +1,9 @@
-import DrawerSettingsArea from '../components/drawer-settings';
+import { Container } from '../components/Container';
 
 const Home: React.FC = () => {
   return (
     <>
+      <Container title="dall'Agocchie's Sidesword"></Container>
       <h1>dall'Agocchie</h1>
       <p>
         {' '}
@@ -12,7 +13,6 @@ const Home: React.FC = () => {
         </abbr>{' '}
         rank challenges on the Bolognese traditions.
       </p>
-      <DrawerSettingsArea />
     </>
   );
 };
