@@ -7,9 +7,11 @@ const About: React.FC = () => {
       <h1>About</h1>
       <p>TODO: Add disclaimer</p>
       <p>
-        This website is a work in progress, critereon of testing are not
-        determined by me and are subject to change. This app is intended as a
-        personal study guide and not an educational tool of its own merits.
+        This website is a work in progress. This app is intended as a personal
+        study guide, and companion app to direct instruction. It is not an
+        educational tool of its own merits, nor a direct translation, but
+        describes an interpretation and understanding of the system, and as such
+        may be altered as my understanding shifts.
       </p>
     </>
   );

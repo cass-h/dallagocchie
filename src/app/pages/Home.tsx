@@ -3,15 +3,12 @@ import { Container } from '../components/Container';
 const Home: React.FC = () => {
   return (
     <>
-      <Container title="dall'Agocchie's Sidesword"></Container>
+      <Container title="Sidesword Schollar"></Container>
       <h1>dall'Agocchie</h1>
       <p>
-        {' '}
-        A study guide for{' '}
-        <abbr title="Academy of European Medieval Martial Arts">
-          AEMMA
-        </abbr>{' '}
-        rank challenges on the Bolognese traditions.
+        A study guide and companion application on the 16th century fencing
+        system of Giovanni dall'Agocchie di Balogna, comprising of the sword in
+        one hand, the sword and dagger, and the sword and cape.
       </p>
     </>
   );
