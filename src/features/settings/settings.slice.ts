@@ -5,13 +5,17 @@ export interface SettingsState {
   theme: 'dark' | 'light';
   drawerWidth: number;
   drawerOpen: boolean;
+  appHand: Hand;
 }
 
 const initialState: SettingsState = {
   theme: 'light',
   drawerWidth: 240,
   drawerOpen: false,
+  appHand: 'left',
 };
+
+export type Hand = 'right' | 'left';
 
 export const settingsSlice = createSlice({
   name: 'settings',
@@ -30,10 +34,13 @@ export const settingsSlice = createSlice({
       state.drawerOpen = action.payload;
       return state;
     },
+    setAppHand: (state, action: PayloadAction<Hand>) => {
+      state.appHand = action.payload;
+    },
   },
 });
 
-export const { setTheme, setDrawerOpen, setDrawerWidth } =
+export const { setTheme, setDrawerOpen, setDrawerWidth, setAppHand } =
   settingsSlice.actions;
 
 export const selectTheme = (state: RootState) => state.settings.theme;
@@ -43,5 +50,7 @@ export const selectDrawer = (state: RootState) => {
     width: state.settings.drawerWidth,
   };
 };
+
+export const selectAppHand = (state: RootState) => state.settings.appHand;
 
 export default settingsSlice.reducer;

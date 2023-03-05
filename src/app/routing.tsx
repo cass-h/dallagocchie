@@ -3,6 +3,7 @@ import React from 'react';
 import { createBrowserRouter, RouteObject } from 'react-router-dom';
 const FoundationsIndex = React.lazy(() => import('./pages/foundations/Index'));
 const About = React.lazy(() => import('./pages/About'));
+const Settings = React.lazy(() => import('./pages/Settings'));
 const Home = React.lazy(() => import('./pages/Home'));
 const SwordAloneIndex = React.lazy(() => import('./pages/sa/Index'));
 const routes: RouteObject[] = [
@@ -19,6 +20,14 @@ const routes: RouteObject[] = [
     element: (
       <React.Suspense fallback={<>...</>}>
         <About />
+      </React.Suspense>
+    ),
+  },
+  {
+    path: '/settings',
+    element: (
+      <React.Suspense fallback={<>...</>}>
+        <Settings />
       </React.Suspense>
     ),
   },

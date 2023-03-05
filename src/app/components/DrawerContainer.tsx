@@ -11,6 +11,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import {
+  selectAppHand,
   selectDrawer,
   setDrawerOpen,
 } from '../../features/settings/settings.slice';
@@ -24,6 +25,7 @@ export const DrawerContainer = (
 ) => {
   const { open, width } = useAppSelector(selectDrawer);
   const dispatch = useAppDispatch();
+  const hand = useAppSelector(selectAppHand);
   const handleDrawerToggle = () => {
     dispatch(setDrawerOpen(!open));
   };
@@ -57,6 +59,7 @@ export const DrawerContainer = (
         <Drawer
           variant="temporary"
           color="secondary"
+          anchor={hand}
           open={open}
           onClose={handleDrawerToggle}
           ModalProps={{
@@ -71,7 +74,7 @@ export const DrawerContainer = (
         </Drawer>
         <Drawer
           variant="permanent"
-          anchor="left"
+          anchor={hand}
           sx={{
             display: { xs: 'none', sm: 'block' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width },
@@ -89,7 +92,9 @@ export const DrawerContainer = (
         }}
       >
         <AppBar position="static">
-          <Toolbar>
+          <Toolbar
+            style={{ flexDirection: hand === 'left' ? 'row' : 'row-reverse' }}
+          >
             <IconButton
               aria-label="open drawer"
               onClick={handleDrawerToggle}

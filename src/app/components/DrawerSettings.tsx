@@ -11,6 +11,7 @@ import {
   LightModeOutlined,
   DarkModeOutlined,
   HomeOutlined,
+  SettingsOutlined,
 } from '@mui/icons-material';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -23,6 +24,9 @@ export default function DrawerSettingsArea() {
   };
   const homeButton = () => {
     navigate('/');
+  };
+  const settingsButton = () => {
+    navigate('/settings');
   };
 
   return (
@@ -38,6 +42,17 @@ export default function DrawerSettingsArea() {
               )}
             </ListItemIcon>
             <ListItemText primary="Toggle theme" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem key="list-settings">
+          <ListItemButton
+            disabled={useLocation().pathname === '/settings'}
+            onClick={settingsButton}
+          >
+            <ListItemIcon>
+              <SettingsOutlined color="inherit" />
+            </ListItemIcon>
+            <ListItemText primary="Settings" />
           </ListItemButton>
         </ListItem>
         <ListItem key="list-home">
