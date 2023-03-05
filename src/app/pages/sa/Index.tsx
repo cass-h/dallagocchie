@@ -1,18 +1,20 @@
 import { FC } from 'react';
-import { Container } from '../../components/Container';
+import { DrawerContainer } from '../../components/DrawerContainer';
 
 const SwordAloneIndex: FC = () => {
   return (
     <>
-      <Container title={'Sword Alone'}></Container>
-      <h1>Sword Alone</h1>
-      <p>
-        In this section you will find the bulk of the critical knowledge to
-        fight with the 16th century sword, as dall'Agocchie believed knowing to
-        defend oneself with the sword in one hand was required to effectively
-        use a secondary weapon.the guards, the strikes, how to defend in guard,
-        how to strike someone in guard, and the crossing of the sword
-      </p>
+      <DrawerContainer title={'Sword Alone'}>
+        <h1>Sword Alone</h1>
+        <p>
+          In this section you will find the bulk of the critical knowledge to
+          fight with the 16th century sword, as dall'Agocchie believed knowing
+          to defend oneself with the sword in one hand was required to
+          effectively use a secondary weapon. In this section, we detail the
+          guards, the strikes, how to defend in guard, how to strike someone in
+          guard, and the crossing of the sword.
+        </p>
+      </DrawerContainer>
     </>
   );
 };
