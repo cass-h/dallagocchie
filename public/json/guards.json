@@ -1,0 +1,38 @@
+[
+	{
+		"name": "coda lunga",
+		"id": "0"
+	},
+	{
+		"name": "porta di ferro",
+		"id": "1"
+	},
+	{
+		"name": "guardia alicorno",
+		"id": "3"
+	},
+	{
+		"name": "guardia di testa",
+		"id": "4"
+	},
+	{
+		"name": "guardia di faccia",
+		"id": "5"
+	},
+	{
+		"name": "guardia d'entrare",
+		"id": "6"
+	},
+	{
+		"name": "guardia alta",
+		"id": "7"
+	},
+	{
+		"name": "guardia di sopra il braccio",
+		"id": "8"
+	},
+	{
+		"name": "guardia di sotto il braccio",
+		"id": "9"
+	}
+]
